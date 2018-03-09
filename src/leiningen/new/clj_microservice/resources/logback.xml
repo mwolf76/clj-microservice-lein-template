@@ -1,0 +1,19 @@
+<!-- Logback configuration. See http://logback.qos.ch/manual/index.html -->
+<configuration scan="true" scanPeriod="10 seconds">
+
+  <!-- Defines an appender that logs to console output -->
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Use the console appender defined above -->
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+  <!-- Log our code at a verbose level -->
+  <logger name="products" level="TRACE" />
+
+</configuration>
